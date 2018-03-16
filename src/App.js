@@ -54,24 +54,14 @@ class App extends Component {
     let persons = null;
 
     if (this.state.showPersons) {
+      //Refactoring hardocoded data into a map function to create each person card
       persons = (
         <div>
-          <Person 
-            name={this.state.persons[0].name} 
-            age={this.state.persons[0].age}
-            //Passes the name as new argument too. This is best practice
-            click={this.switchNameHandler.bind(this, 'Arya!')}>
-            My hobbies: changing faces, plan revange, check my list
-          </Person>
-          <Person 
-            name={this.state.persons[1].name} 
-            age={this.state.persons[1].age}
-            //Two way binding
-            changed={ this.nameChangeHandler}
-            />
-          <Person 
-            name={this.state.persons[2].name} 
-            age={this.state.persons[2].age}/>
+          {this.state.persons.map(person => {
+            return <Person 
+                    name={person.name}
+                    age={person.age} />
+          })}
        </div> 
       );
     }
