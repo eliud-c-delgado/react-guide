@@ -21,9 +21,8 @@
 @media only screen and (max-width: 650px) {
   .Person {
     margin: 1.5em auto;
-    height: 45vw;
+    height: 33vh;
     width: 90%;
-
   }
 }
 

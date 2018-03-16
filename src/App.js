@@ -77,6 +77,13 @@ class App extends Component {
       style.backgroundColor = 'rgb(150, 21, 42)';
     }
 
+    if (this.state.persons.length === 0) {
+      return <div className="container">
+              <h3 className="Got">All your favorite characters are dead now</h3>
+              <h4><button><a href='./'>Start again</a></button></h4>
+             </div>
+    }
+
     return (
       <div className="App">
         <h1 className="Got">Hi, I'm a Game of Thrones web-app</h1>

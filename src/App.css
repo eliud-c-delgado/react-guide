@@ -4,13 +4,6 @@
   margin: 2rem 0 0;
 }
 
-html {
-  background-color: antiquewhite;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-}
 
 * {
   box-sizing: border-box;
@@ -30,6 +23,7 @@ html {
     flex-direction: column;
     justify-items: stretch;
     align-items: stretch;
+    text-align: center;
   }
 }
 
@@ -56,4 +50,12 @@ button:hover {
 
 .Got {
   font-family: 'Cinzel Decorative', cursive;
+}
+
+a {
+  color:  rgb(67, 36, 67);
+}
+
+button:hover a{
+  color: ghostwhite;
 }
