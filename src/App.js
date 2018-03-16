@@ -14,14 +14,14 @@ class App extends Component {
     showPersons: false
   }
 
-  switchNameHandler = (newName) => {
-    //console.log('Was clicked');
-    //Don't this.state.persons[0].name = "A girl has no name";
-    this.setState({persons: [
-      { name: newName, age: 16 },
-      { name: "the Mother of Dragons", age: 28 },
-      { name: "The King in the North", age: 24 }
-    ]})
+  deletePersonHandler = (personIndex) => {
+    //Access all persons in the state
+    //const persons = this.state.persons.slice();  Creates a new array with the info from the state array, thus avoiding impurity
+    const persons = [...this.state.persons]; //Same as previous but using ES6
+    //Removes one elemenent from the array
+    persons.splice(personIndex, 1);
+    //Sets state to the new updated reference array
+    this.setState({persons: persons});
   }
 
   //Two way binding
@@ -57,8 +57,9 @@ class App extends Component {
       //Refactoring hardocoded data into a map function to create each person card
       persons = (
         <div>
-          {this.state.persons.map(person => {
-            return <Person 
+          {this.state.persons.map((person, index) => {
+            return <Person
+                    click={() => this.deletePersonHandler(index)}
                     name={person.name}
                     age={person.age} />
           })}
