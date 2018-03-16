@@ -79,8 +79,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>Hi, I'm a Game of Thrones web-app</h1>
-        <h2>Valar Morghulis</h2>
+        <h1 className="Got">Hi, I'm a Game of Thrones web-app</h1>
+        <h2 className="Got">Valar Morghulis</h2>
         <p>Click on your favorite character</p>
         {/*Passes the name as new argument, 
         it doesn't execute the fuction right away*/}
