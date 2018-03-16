@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+  font-family: Avenir Next, sans-serif;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: mediumpurple;
+  border: solid 1px  rgb(67, 36, 67);
+  border-radius: 4px;
+  color:  rgb(67, 36, 67);
+  font-weight: 600;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: .25em;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-out, color 0.6s ease-in;
+}
+ 
+button:hover {
+  box-shadow: 0 .25em .5em 0 midnightblue, 0 .5em .5em 0 midnightblue;
+  background-color: rgb(67, 36, 67);
+  color: ghostwhite;
+}
+

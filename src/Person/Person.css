@@ -1,0 +1,12 @@
+.Person {
+  width: 50%;
+  margin: 1em auto;
+  border: 1px solid  rgb(67, 36, 67);
+  border-radius: 4px;
+  box-shadow: 0 2px 3px midnightblue;
+  padding: 1em;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* This is global CSS actually */

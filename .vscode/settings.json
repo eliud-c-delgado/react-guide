@@ -1,0 +1,9 @@
+{
+  "eslint.enable": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "markdownlint.config": {
+    "MD013": false
+  },
+  "languageTool.enabled": false,
+  "polymer-ide.analyzeWholePackage": false
+}
