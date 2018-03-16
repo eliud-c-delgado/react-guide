@@ -25,14 +25,23 @@ class App extends Component {
   }
 
   //Two way binding
-  nameChangeHandler = (event) => {
-    this.setState( {
-      persons: [
-        { name: "Arya Stark", age: 16 },
-        { name: event.target.value, age: 28 },
-        { name: "Jon Snow", age: 24 }
-      ]
-    })
+  nameChangeHandler = (event, id) => {
+    
+    //Pointing handler to element ID
+    const personIndex = this.state.persons.findIndex(p => {
+      return p.id === id;
+    });
+   
+    //Using spread operator to set the list to a new object, thus preventing state change
+    const person = {
+      ...this.state.persons[personIndex]
+    };
+   
+    //Assigning the state to a copy of the original state array
+    person.name = event.target.value;
+    const persons = [...this.state.persons];
+    persons[personIndex] = person;
+    this.setState( {persons: persons} );
   }
 
   //Toggles between showing or not showing Persons
@@ -62,7 +71,8 @@ class App extends Component {
                     click={() => this.deletePersonHandler(index)}
                     name={person.name}
                     age={person.age} 
-                    key={person.id} />
+                    key={person.id}
+                    changed={(event) => this.nameChangeHandler(event, person.id)} />
           })}
        </div> 
       );
