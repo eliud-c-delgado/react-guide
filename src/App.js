@@ -80,38 +80,13 @@ class App extends Component {
 
     return (
       <div className="App" style={style}>
-        <h1>Hi, I'm a Game of Thrones App</h1>
+        <h1>Hi, I'm a Game of Thrones web-app</h1>
         <h2>made with React</h2>
         <p>Valar Morghulis</p>
         {/*Passes the name as new argument, 
         it doesn't execute the fuction right away*/}
         <button onClick={ () => this.togglePersonsHandler()}>show / hide names</button>
          {persons}
-          {/*
-          {
-          this.state.showPersons ?
-          //same as this.state.showPersons === true 
-          <div>
-            <Person 
-              name={this.state.persons[0].name} 
-              age={this.state.persons[0].age}
-              //Passes the name as new argument too. This is best practice
-              click={this.switchNameHandler.bind(this, 'Arya!')}>
-              My hobbies: changing faces, plan revange, check my list
-            </Person>
-            <Person 
-              name={this.state.persons[1].name} 
-              age={this.state.persons[1].age}
-              //Two way binding
-              changed={ this.nameChangeHandler}
-              />
-            <Person 
-              name={this.state.persons[2].name} 
-              age={this.state.persons[2].age}/>
-          </div> 
-          {/*else 
-          :null
-        }*/}
       </div>
     );
     //return React.createElement('div', {className: 'App'}, null, React.createElement('h1', 'null', "I'm a React App!"));
