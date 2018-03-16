@@ -52,10 +52,7 @@ class App extends Component {
 
   render() {
     const style = {
-      backgroundColor: 'ghostwhite',
-      height: '100vh',
-      margin: '0',
-      padding: '1em'
+      backgroundColor: 'rgb(67, 36, 67)'
     }
 
     //Refactoring conditional into plain JS (JSX onlo for what will be conditionally rendered)
@@ -76,17 +73,20 @@ class App extends Component {
           })}
        </div> 
       );
+
+      style.backgroundColor = 'rgb(150, 21, 42)';
     }
 
     return (
-      <div className="App" style={style}>
+      <div className="App">
         <h1>Hi, I'm a Game of Thrones web-app</h1>
-        <h2>made with React</h2>
-        <p>Valar Morghulis</p>
+        <h2>Valar Morghulis</h2>
+        <p>Click on your favorite character</p>
         {/*Passes the name as new argument, 
         it doesn't execute the fuction right away*/}
-        <button onClick={ () => this.togglePersonsHandler()}>show / hide names</button>
+        <button style={style} onClick={ () => this.togglePersonsHandler()}>show / hide</button>
          {persons}
+        <h3>made by Eliud C. Delgado with &hearts; & React</h3>
       </div>
     );
     //return React.createElement('div', {className: 'App'}, null, React.createElement('h1', 'null', "I'm a React App!"));

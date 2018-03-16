@@ -2,6 +2,10 @@
   text-align: center;
   font-family: Avenir Next, sans-serif;
   font-size: 16px;
+  background-color: ghostwhite;
+  height: 100vh;
+  margin: 0;
+  padding: 1em;
 }
 
 * {
@@ -9,10 +13,9 @@
 }
 
 button {
-  background-color: mediumpurple;
   border: solid 1px  rgb(67, 36, 67);
   border-radius: 4px;
-  color:  rgb(67, 36, 67);
+  color: ghostwhite;
   font-weight: 600;
   padding: 1em 2em;
   text-align: center;
