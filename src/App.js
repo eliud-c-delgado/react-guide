@@ -62,7 +62,7 @@ class App extends Component {
     if (this.state.showPersons) {
       //Refactoring hardocoded data into a map function to create each person card
       persons = (
-        <div>
+        <div className="container">
           {this.state.persons.map((person, index) => {
             return <Person
                     click={() => this.deletePersonHandler(index)}
@@ -86,7 +86,7 @@ class App extends Component {
         it doesn't execute the fuction right away*/}
         <button style={style} onClick={ () => this.togglePersonsHandler()}>show / hide</button>
          {persons}
-        <h3>made by Eliud C. Delgado with &hearts; & React</h3>
+        <h3>made by Eliud C. Delgado with &hearts; & React.js</h3>
       </div>
     );
     //return React.createElement('div', {className: 'App'}, null, React.createElement('h1', 'null', "I'm a React App!"));

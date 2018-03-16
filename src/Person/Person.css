@@ -1,12 +1,30 @@
 .Person {
-  width: 50%;
-  margin: 1em auto;
+  min-width: 15vw;
+  min-height: 18vw;
+  margin: 2rem 1.5vw;
   border: 1px solid  rgb(67, 36, 67);
   border-radius: 4px;
   box-shadow: 0 2px 3px midnightblue;
-  padding: 1em;
+  padding: 2em;
   text-align: center;
   box-sizing: border-box;
+  color: #222;
+  transition: color 0.4s ease-in-out;
+}
+
+.Person:hover {
+  color: rgb(150, 21, 42);
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 650px) {
+  .Person {
+    margin: 1.5em;
+    height: 33vw;
+    width: 90%;
+
+  }
 }
 
 /* This is global CSS actually */

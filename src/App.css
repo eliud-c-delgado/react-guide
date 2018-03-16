@@ -1,21 +1,42 @@
 .App {
   text-align: center;
+  height: 100vh;
+  margin: 2rem 0 0;
+}
+
+html {
+  background-color: antiquewhite;
   font-family: Avenir Next, sans-serif;
   font-size: 16px;
-  background-color: ghostwhite;
-  height: 100vh;
   margin: 0;
-  padding: 1em;
+  padding: 0;
 }
 
 * {
   box-sizing: border-box;
 }
 
+.container {
+  display: flex;
+  justify-items:center;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+@media only screen and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+}
+
 button {
   border: solid 1px  rgb(67, 36, 67);
   border-radius: 4px;
-  color: ghostwhite;
+  color: antiquewhite;
   font-weight: 600;
   padding: 1em 2em;
   text-align: center;
